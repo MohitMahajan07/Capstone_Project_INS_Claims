@@ -1,0 +1,7 @@
+file,rows,cols
+Region_Hierarchy.csv,220,5
+Customer_Profile.csv,15000,8
+Provider_Network.csv,3000,5
+Policy_Master.csv,30000,10
+Claim_Transactions.csv,45000,13
+Fraud_Alerts.csv,25000,8

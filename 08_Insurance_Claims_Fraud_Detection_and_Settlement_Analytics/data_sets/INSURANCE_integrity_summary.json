@@ -1,0 +1,8 @@
+{
+  "customers_in_policies_hit_rate": 1.0,
+  "regions_in_customers_hit_rate": 1.0,
+  "providers_in_claims_hit_rate": 1.0,
+  "customers_in_claims_hit_rate": 1.0,
+  "policies_in_claims_hit_rate": 1.0,
+  "claims_in_alerts_hit_rate": 1.0
+}
