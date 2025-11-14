@@ -8,7 +8,6 @@ CREATE OR REPLACE STREAM ST_POLICY_MASTER ON TABLE RAW_DATA.POLICY_MASTER;
 CREATE OR REPLACE STREAM ST_CUSTOMER_PROFILE ON TABLE RAW_DATA.CUSTOMER_PROFILE;
 
 ----------------------------------------------------------- TASK 9 -----------------------------------------------------------
-
 -- CREATING A PSEUDO STREAM --
 CREATE OR REPLACE TABLE PSEUDO_STREAM
 (
@@ -337,8 +336,8 @@ peer_stats AS (
 SELECT ps.PROVIDER_ID, ps.PROVIDER_NAME, ps.CATEGORY, ps.REGION_ID, ps.claims_count, ps.avg_approved_amount,
     CASE 
         WHEN (peer_total_claims - ps.claims_count) > 0 THEN
-            (peer_total_approved - ps.sum_approved_amount)
-            / NULLIF(peer_total_claims - ps.claims_count, 0)
+             (peer_total_approved - ps.sum_approved_amount)
+             / NULLIF(peer_total_claims - ps.claims_count, 0)
         ELSE NULL
     END AS peer_avg_approved,
     CASE 
